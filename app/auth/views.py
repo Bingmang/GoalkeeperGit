@@ -16,7 +16,7 @@ def login():
         user = User.query.filter_by(email=form.email.data).first()
         if user is not None and user.verify_password(form.password.data):
             login_user(user, form.remember_me.data)
-            return redirect(request.args.get('next') or url_for('main.index'))
+            return redirect(request.args.get('next') or url_for('goalkeeper.itemboard'))
         flash('帐号密码错误，请重试。')
     return render_template('auth/login.html', form=form)
 
@@ -26,7 +26,7 @@ def login():
 def logout():
     logout_user()
     flash('您已成功登出.')
-    return redirect(url_for('main.index'))
+    return redirect(url_for('auth.login'))
 
 
 @auth.route('/register', methods=['GET', 'POST'])
