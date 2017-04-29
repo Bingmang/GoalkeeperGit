@@ -170,13 +170,11 @@ class User(UserMixin, db.Model):
             url=url, hash=hash, size=size, default=default, rating=rating)
 
     def to_json(self):
-        json_user = result{
-            {
-                'url': url_for('api.get_user', id=self.id, _external=True),
-                'username': self.username,
-                'member_since': self.member_since,
-                'last_seen': self.last_seen
-            }
+        json_user = {
+            'url': url_for('api.get_user', id=self.id, _external=True),
+            'username': self.username,
+            'member_since': self.member_since,
+            'last_seen': self.last_seen
         }
         return json_user
 
@@ -224,14 +222,12 @@ class Goalkeepers(db.Model):
     timestamp = db.Column(db.DateTime, default=datetime.utcnow)
 
     def to_json(self):
-        json_goalkeeper = result{
-            {
-                'id': self.id,
-                'item_id': self.item_id,
-                'item_name': self.item_name,
-                'owner_id': self.owner_id,
-                'alarm_state': self.alarm_state,
-                'registe_time': self.timestamp
-            }
+        json_goalkeeper = {
+            'id': self.id,
+            'item_id': self.item_id,
+            'item_name': self.item_name,
+            'owner_id': self.owner_id,
+            'alarm_state': self.alarm_state,
+            'registe_time': self.timestamp
         }
         return json_goalkeeper
