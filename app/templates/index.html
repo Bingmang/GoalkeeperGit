@@ -1,0 +1,380 @@
+{% extends "base.html" %}
+{% set active_page = "index" %}
+{% block title %}冰芒科技 - 做只不服输的蜗牛{% endblock %}
+{% block page_content %}
+    <div id="hero" class="hero-section">
+
+        <div id="hero-carousel" class="hero-carousel carousel carousel-fade slide" data-ride="carousel" data-interval="10000">
+
+            <div class="figure-holder-wrapper">
+        		<div class="container">
+            		<div class="row">
+                		<div class="figure-holder">
+                	        <!-- <img class="figure-image img-responsive" src="/static/images/imac.png" alt="image" /> -->
+                        </div><!--//figure-holder-->
+            		</div><!--//row-->
+        		</div><!--//container-->
+    		</div><!--//figure-holder-wrapper-->
+
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li class="active" data-slide-to="0" data-target="#hero-carousel"></li>
+				<li data-slide-to="1" data-target="#hero-carousel"></li>
+				<li data-slide-to="2" data-target="#hero-carousel"></li>
+			</ol>
+
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner">
+
+				<div class="item item-1 active">
+					<div class="item-content container">
+    					<div class="item-content-inner">
+
+				            <h2 class="heading"> 《动物世界》 <br class="hidden-xs">歌手：薛之谦</h2>
+                            <br>
+				            <p class="intro">东打一下西戳一下<br<br>>动物未必需要尖牙<br><br>示爱的方法有礼貌或是我管它<br><br>要将情人一口吞下<br><br>还要显得温文尔雅<br><br>螳螂委屈的展示旧伤疤</p>
+				            <a class="btn btn-primary btn-cta" href="https://music.163.com/#/song?id=468517654" target="_blank">播放</a>
+
+    					</div><!--//item-content-inner-->
+					</div><!--//item-content-->
+				</div><!--//item-->
+
+				<div class="item item-2">
+					<div class="item-content container">
+						<div class="item-content-inner">
+
+				            <h2 class="heading"> 《大雁》 <br class="hidden-xs">歌手：马頔</h2>
+                            <br>
+				            <p class="intro">栖客万重山摇地动 游者千呼唤难与共<br><br>归途万里生死相依 声势浩大孤掌难鸣<br><br>未曾涂炭愧对丛林 蝇营狗苟分崩离析<br><br>三千世界万象千愁 误上层楼解愁皆稠</p>
+				            <a class="btn btn-primary btn-cta" href="https://music.163.com/#/song?id=465921227" target="_blank">播放</a>
+
+    					</div><!--//item-content-inner-->
+					</div>
+				</div><!--//item-->
+
+				<div class="item item-3">
+					<div class="item-content container">
+						<div class="item-content-inner">
+
+				            <h2 class="heading"> 《小半》 <br class="hidden-xs">歌手：陈粒</h2>
+				            <p class="intro">左顾右盼不自然的暗自喜欢<br><br>偷偷搭讪总没完地坐立难安<br><br>试探说晚安 多空泛又心酸<br><br>低头呢喃 对你的偏爱太过于明目张胆</p>
+				            <a class="btn btn-primary btn-cta" href="https://music.163.com/#/song?id=421423806" target="_blank">播放</a>
+
+    					</div><!--//item-content-inner-->
+					</div>
+				</div><!--//item-->
+			</div><!--//carousel-inner-->
+
+		</div><!--//carousel-->
+    </div><!--//hero-->
+
+    <div id="about" class="about-section">
+        <div class="container text-center">
+            <h2 class="section-title">Programming Language</h2>
+            <p class="intro">这个世界本就是复杂的，所以你不能怪C++向你残酷地展露了真相。</p>
+            <ul class="technologies list-inline">
+                <li><img src="/static/images/logo-bootstrap.svg" alt="Bootstrap"></li>
+                <li><img src="/static/images/logo-angular.svg" alt="Angular"></li>
+                <li><img src="/static/images/logo-html5.svg" alt="HTML5"></li>
+                <li><img src="/static/images/logo-css3.svg" alt="CSS3"></li>
+                <li><img src="/static/images/logo-less.svg" alt="Less"></li>
+                <li><img src="/static/images/logo-jquery.svg" alt="jQuery"></li>
+            </ul>
+
+            <div class="items-wrapper row">
+                <div class="item col-sm-4 col-xs-12">
+                    <div class="item-inner">
+                        <div class="figure-holder">
+                            <img class="figure-image" src="/static/images/c++.svg" alt="image">
+                        </div><!--//figure-holder-->
+                        <h3 class="item-title">C++</h3>
+                        <div class="item-desc">
+                            <a href="https://www.zybuluo.com/AaronTuring/note/652445" target="_blank">第一章 开始</a><br>
+                            <a href="https://www.zybuluo.com/AaronTuring/note/653620" target="_blank">第二章 变量和基本类型</a><br>
+                            <a href="https://www.zybuluo.com/AaronTuring/note/660721" target="_blank">第三章 字符串、向量数组</a><br>
+                            <a href="https://www.zybuluo.com/AaronTuring/note/665083" target="_blank">第四章 表达式</a><br>
+                            <a href="https://www.zybuluo.com/AaronTuring/note/668715" target="_blank">第五章 语句</a><br>
+                            <a href="https://www.zybuluo.com/AaronTuring/note/668717" target="_blank">第六章 函数</a><br>
+                            <a href="https://www.zybuluo.com/AaronTuring/note/679413" target="_blank">第七章 类</a><br>
+                            <a href="https://www.zybuluo.com/AaronTuring/note/693235" target="_blank">第八章 IO库</a><br>
+                            <a href="https://www.zybuluo.com/AaronTuring/note/694137" target="_blank">第九章 顺序容器</a><br>
+                            <a href="https://www.zybuluo.com/AaronTuring/note/695547" target="_blank">第十章 泛型算法</a><br>
+                            <a href="https://www.zybuluo.com/AaronTuring/note/696651" target="_blank">第十一章 泛型算法</a>
+                        </div><!--//item-desc-->
+                    </div><!--//item-inner-->
+                </div><!--//item-->
+                <div class="item col-sm-4 col-xs-12">
+                    <div class="item-inner">
+                        <div class="figure-holder">
+                            <img class="figure-image" src="/static/images/python.svg" alt="image">
+                        </div><!--//figure-holder-->
+                        <h3 class="item-title">Python</h3>
+                        <div class="item-desc">
+                            <a href="https://www.zybuluo.com/AaronTuring/note/673820" target="_blank">Python自然语言处理</a><br>
+                            <a href="https://www.zybuluo.com/AaronTuring/note/712207" target="_blank">Spark快速大数据分析</a><br>
+
+                        </div><!--//item-desc-->
+                    </div><!--//item-inner-->
+                </div><!--//item-->
+                <div class="item col-sm-4 col-xs-12">
+                    <div class="item-inner">
+                        <div class="figure-holder">
+                            <img class="figure-image" src="/static/images/scrapy.svg" alt="image">
+                        </div><!--//figure-holder-->
+                        <h3 class="item-title">Web Crawler</h3>
+                        <div class="item-desc">
+                            <a href="https://www.zybuluo.com/AaronTuring/note/698901" target="_blank">Python网络数据采集</a><br>
+                        </div><!--//item-desc-->
+                    </div><!--//item-inner-->
+                </div><!--//item-->
+            </div><!--//items-wrapper-->
+        </div><!--//container-->
+    </div><!--//about-section-->
+
+    <div id="testimonials" class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title text-center">他人眼中的我</h2>
+            <div class="item center-block">
+                <div class="profile-holder">
+                    <img class="profile-image" src="/static/images/profile-1.png" alt="profile">
+                </div>
+                <div class="quote-holder">
+                    <blockquote class="quote">
+                        <p>妈卖批，这小伙子这么谦虚还这么能干♂，你们不看好他真是瞎了。</p>
+                        <div class="quote-source">
+                            <span class="name">@尼古拉斯·赵四,</span>
+                            <span class="meta">美国圣地亚哥</span>
+                        </div><!--//quote-source-->
+                    </blockquote>
+                </div><!--//quote-holder-->
+            </div><!--//item-->
+            <div class="item item-reversed center-block">
+                <div class="profile-holder">
+                    <img class="profile-image" src="/static/images/profile-2.png" alt="profile">
+                </div>
+                <div class="quote-holder">
+                    <blockquote class="quote">
+                        <p>学习能力很强♂，是个好帮手♂</p>
+                        <div class="quote-source">
+                            <span class="name">@隔壁老王,</span>
+                            <span class="meta">伦敦</span>
+                        </div><!--//quote-source-->
+                    </blockquote>
+                </div><!--//quote-holder-->
+            </div><!--//item-->
+            <div class="item center-block">
+                <div class="profile-holder">
+                    <img class="profile-image" src="/static/images/profile-3.png" alt="profile">
+                </div>
+                <div class="quote-holder">
+                    <blockquote class="quote">
+                        <p>我一直追寻着你心情的足迹 被所有的人误解都要理解你 <br>准备好当擦亮你天际的浮云 你却在终点等我笑里有雨滴</p>
+                        <div class="quote-source">
+                            <span class="name">@王菲,</span>
+                            <span class="meta">北京</span>
+                        </div><!--//quote-source-->
+                    </blockquote>
+                </div><!--//quote-holder-->
+            </div><!--//item-->
+            <div class="item item-reversed center-block">
+                <div class="profile-holder">
+                    <img class="profile-image" src="/static/images/profile-4.png" alt="profile">
+                </div>
+                <div class="quote-holder">
+                    <blockquote class="quote">
+                        <p>You can crashing into my heart like a tidal wave <br>你宛如一波潮汐汇入我的心海 <br>You're ever lasted love me hard like a tidal wave <br>你的爱意也似潮水持续向我涌来</p>
+                         <div class="quote-source">
+                            <span class="name">@Kiso/Rossy,</span>
+                            <span class="meta">Paris</span>
+                        </div><!--//quote-source-->
+                    </blockquote>
+
+                </div><!--//quote-holder-->
+            </div><!--//item-->
+        </div><!--//container-->
+    </div><!--//testimonials-->
+
+    <div id="features" class="features-section">
+        <div class="container text-center">
+            <h2 class="section-title">扯蛋</h2>
+            <p class="intro">随便放几张图片</p>
+
+            <div class="tabbed-area row">
+
+                <!-- Nav tabs -->
+                <ul class="feature-nav nav nav-pill nav-stacked text-left col-md-4 col-sm-6 col-xs-12 col-md-push-8 col-sm-push-6 col-xs-push-0" role="tablist">
+                     <li role="presentation" class="active"><a href="#feature-1" aria-controls="feature-1" role="tab" data-toggle="tab"><i class="fa fa-magic"></i>20+ Use Case-based App Pages</a></li>
+                     <li role="presentation"><a href="#feature-2" aria-controls="feature-2" role="tab" data-toggle="tab"><i class="fa fa-cubes"></i>100+ Components and Widgets</a></li>
+                     <li role="presentation"><a href="#feature-3" aria-controls="feature-3" role="tab" data-toggle="tab"><i class="fa fa-bar-chart"></i>Useful Chart Libraries</a></li>
+
+                    <li role="presentation"><a href="#feature-4" aria-controls="feature-4" role="tab" data-toggle="tab"><i class="fa fa-star"></i>AngularJS Version Included</a></li>
+
+                    <li role="presentation"><a href="#feature-5" aria-controls="feature-5" role="tab" data-toggle="tab"><i class="fa fa-rocket"></i>Built on Bootstrap 3</a></li>
+
+                    <li role="presentation"><a href="#feature-6" aria-controls="feature-6" role="tab" data-toggle="tab"><i class="fa fa-tablet"></i>Fully Responsive</a></li>
+                    <li role="presentation"><a href="#feature-7" aria-controls="feature-7" role="tab" data-toggle="tab"><i class="fa fa-file-code-o"></i>Valid HTML5 + CSS3</a></li>
+                    <li role="presentation"><a href="#feature-8" aria-controls="feature-8" role="tab" data-toggle="tab"><i class="fa fa-heart"></i>Free Updates &amp; Support + Documentation</a></li>
+
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="feature-content tab-content col-md-8 col-sm-6 col-xs-12 col-md-pull-4 col-sm-pull-6 col-xs-pull-0">
+                    <div role="tabpanel" class="tab-pane fade in active" id="feature-1">
+                        <a href="#"><img class="img-responsive" src="/static/images/feature-1.png" alt="screenshot" ></a>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="feature-2">
+                        <a href="#"><img class="img-responsive" src="/static/images/feature-2.png" alt="screenshot" ></a>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="feature-3">
+                        <a href="#"><img class="img-responsive" src="/static/images/feature-3.png" alt="screenshot" ></a>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="feature-4">
+                        <a href="#"><img class="img-responsive" src="/static/images/feature-4.png" alt="screenshot" ></a>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="feature-5">
+                        <a href="#"><img class="img-responsive" src="/static/images/feature-5.png" alt="screenshot" ></a>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="feature-6">
+                        <a href="#"><img class="img-responsive" src="/static/images/feature-6.png" alt="screenshot" ></a>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="feature-7">
+                        <a href="#"><img class="img-responsive" src="/static/images/feature-7.png" alt="screenshot" ></a>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="feature-8">
+                        <a href="#"><img class="img-responsive" src="/static/images/feature-8.png" alt="screenshot" ></a>
+                    </div>
+
+                </div><!--//feature-content-->
+
+
+            </div><!--//tabbed-area-->
+
+        </div><!--//container-->
+    </div><!--//features-->
+
+    <div class="team-section" id="team">
+        <div class="container text-center">
+            <h2 class="section-title">我的Team</h2>
+            <p class="intro">其实就是我自己啦</p>
+            <div class="story">
+                <p>I am who we are.</p>
+            </div>
+            <div class="members-wrapper row">
+                <div class="item col-md-6 col-sm-6 col-xs-12">
+                    <div class="item-inner">
+                        <div class="profile">
+                            <img class="profile-image" src="/static/images/team-1.png" alt="Xiaoying Riley" />
+                        </div>
+
+                        <div class="member-content">
+                            <h3 class="member-name">小飞</h3>
+                            <div class="member-title">Full-Stack Designer</div>
+                            <ul class="social list-inline">
+                                <li><a class="twitter" href="https://twitter.com/3rdwave_themes" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                <li><a class="facebook" href="" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <li><a class="github" href="https://github.com/Bingmang" target="_blank"><i class="fa fa-github"></i></a></li>
+                                <li><a class="dribbble" href="" target="_blank"><i class="fa fa-dribbble"></i></a></li>
+                               <li><a class="linkedin" href="https://www.linkedin.com/in/%E9%B8%A3%E9%A3%9E-%E9%AB%98-6b5149110/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+
+                            </ul>
+                            <div class="member-desc">
+                               <p>小飞说他想当全栈工程师。</p>
+                            </div><!--//member-desc-->
+                        </div><!--//member-content-->
+                    </div><!--//item-inner-->
+                </div><!--//item-->
+                <div class="item col-md-6 col-sm-6 col-xs-12">
+                    <div class="item-inner">
+                        <div class="profile">
+                            <img class="profile-image" src="/static/images/team-2.png" alt="Tom Najdek" />
+                        </div>
+
+                        <div class="member-content">
+                            <h3 class="member-name">Soul of 小飞</h3>
+                            <div class="member-title">Full-Stack Developer</div>
+                            <ul class="social list-inline">
+                                <li><a class="twitter" href="" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="" target="_blank"><i class="fa fa-globe"></i></a></li>
+                                <li><a class="github" href="https://github.com/Bingmang" target="_blank"><i class="fa fa-github"></i></a></li>
+
+
+                            </ul>
+                            <div class="member-desc">
+                                <p>Soul of 小飞 说你的心太大了。但是有何不可呢？</p>
+</p>
+                            </div><!--//member-desc-->
+                        </div><!--//member-content-->
+                    </div><!--//item-inner-->
+                </div><!--//item-->
+            </div><!--//members-wrapper-->
+        </div>
+    </div><!--//team-section-->
+
+    <div id="pricing" class="pricing-section">
+        <div class="container text-center">
+            <h2 class="section-title">卖身</h2>
+            <div class="intro">我真的不要钱</div>
+            <div class="pricing-wrapper">
+                <div class="item item-1 col-md-4 col-sm-4 col-xs-12">
+                    <div class="item-inner">
+                        <h3 class="item-heading">脑子</h3>
+                        <div class="price-figure">
+                            <span class="currency">￥</span><span class="number">6,000</span>
+                        </div><!--//price-figure-->
+                        <div class="price-desc">
+                            <p>脑力活...</p>
+                            <a href="#" target="_blank">查看细节</a>
+
+
+                        </div><!--//price-desc-->
+                        <a class="btn btn-cta" href="#">购买</a>
+
+                    </div><!--//item-inner-->
+                </div><!--//item-->
+                <div class="item item-2 col-md-4 col-sm-4 col-xs-12">
+                    <div class="item-inner">
+                        <h3 class="item-heading">肉身</h3>
+                        <div class="price-figure">
+                            <span class="currency">￥</span><span class="number">8,000</span>
+                        </div><!--//price-figure-->
+                        <div class="price-desc">
+                            <p>想什么呢，体力活！...</p>
+                            <a href="#" target="_blank">查看细节</a>
+
+
+                        </div><!--//price-desc-->
+                        <a class="btn btn-cta" href="#">购买</a>
+
+                    </div><!--//item-inner-->
+                </div><!--//item-->
+
+                <div class="item item-3 col-md-4 col-sm-4 col-xs-12">
+                    <div class="item-inner">
+                        <h3 class="item-heading">SOUL</h3>
+                        <div class="price-figure">
+                            <span class="currency">￥</span><span class="number">∞</span>
+                        </div><!--//price-figure-->
+                        <div class="price-desc">
+                            <p>想的美！</p>
+                            <a href="#" target="_blank">查看细节</a>
+                        </div><!--//price-desc-->
+                        <a class="btn btn-cta" href="#" target="_blank">不让你买</a>
+
+                    </div><!--//item-inner-->
+                </div><!--//item-->
+            </div><!--//pricing-wrapper-->
+
+        </div><!--//container-->
+    </div><!--//pricing-section-->
+    <div id="contact" class="contact-section">
+        <div class="container text-center">
+            <h2 class="section-title">联系我吧</h2>
+            <div class="contact-content">
+                <p> 我的邮箱：ustbbingmang@foxmail.com 谢谢支持</p>
+
+            </div>
+            <a class="btn btn-cta btn-primary" href="https://github.com/Bingmang">戳我联系</a>
+
+        </div><!--//container-->
+    </div><!--//contact-section-->
+{% endblock %}
