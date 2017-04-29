@@ -83,7 +83,7 @@
 
     <!-- FOOTER -->
     {% block footer %}
-    <footer class="footer text-center">
+    <footer {% if active_page!='index' %}class="footer-down text-center"{% else %}class="footer text-center"{% endif %}>
         <div class="container">
             <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can check out other license options via our website: themes.3rdwavemedia.com */-->
             <small class="copyright">© 2017 Goalkeeper, Inc. <i class="fa fa-heart"></i> by <a href="https://github.com/Bingmang" target="_blank">XiaoFei</a>.</small>

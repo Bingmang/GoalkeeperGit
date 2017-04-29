@@ -13,9 +13,9 @@ def get_goalkeeper(item_id):
         if g.current_user == goalkeeper.owner:
             return jsonify(goalkeeper.to_json())
         else:
-            return forbidden('The Goalkeeper is NOT BELONGS to you! --By Goalkeeper')
+            return forbidden('You have no Permission! --By Goalkeeper')
     else:
-        return forbidden('The Goalkeeper is NOT EXIST! --By Goalkeeper')
+        return forbidden('You have no Permission!!! --By Goalkeeper')
 
 
 # @api.route('/posts/', methods=['POST'])

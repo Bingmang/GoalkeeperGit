@@ -18,7 +18,7 @@ def itemregistrate():
                                  owner=current_user._get_current_object())
         db.session.add(goalkeeper)
         flash('成功添加 ' + form.item_name.data + ' 到您的物品中')
-        return redirect(url_for('goalkeeper.itemboard'))
+        return redirect(url_for('goalkeeper.itemregistrate'))
     return render_template("goalkeeper/itemregistrate.html", form=form)
 
 
