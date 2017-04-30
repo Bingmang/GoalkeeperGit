@@ -12,11 +12,21 @@ def get_goalkeeper(item_id):
     if goalkeeper is not None:
         if g.current_user == goalkeeper.owner:
             return jsonify(goalkeeper.to_json())
-        else:
-            return forbidden('The Goalkeeper is NOT BELONGS to you! --By Goalkeeper')
-    else:
-        return forbidden('The Goalkeeper is NOT EXIST! --By Goalkeeper')
+        return forbidden('The Goalkeeper is NOT BELONGS to you! --By Goalkeeper')
+    return forbidden('The Goalkeeper is NOT EXIST! --By Goalkeeper')
 
+
+@api.route('/get_user_goalkeepers/<path:user_email>')
+def get_user_goalkeepers(user_email):
+    goalkeepers = g.current_user.goalkeepers.order_by(Goalkeepers.timestamp)
+    if goalkeepers is not None:
+        if user_email == g.current_user.email:
+            json_goalkeepers = {"goalkeepers": []}
+            for goalkeeper in goalkeepers:
+                json_goalkeepers["goalkeepers"].append(goalkeeper.to_json())
+            return jsonify(json_goalkeepers)
+        return forbidden('The Goalkeeper is NOT BELONGS to you! --By Goalkeeper')
+    return forbidden('The Goalkeeper is NOT EXIST! --By Goalkeeper')
 
 # @api.route('/posts/', methods=['POST'])
 # @permission_required(Permission.WRITE_ARTICLES)
