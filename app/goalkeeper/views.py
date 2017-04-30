@@ -1,4 +1,4 @@
-from flask import render_template, redirect, request, url_for, flash
+from flask import render_template, redirect, request, url_for, flash, abort
 from flask_login import login_user, logout_user, login_required, \
     current_user
 from . import goalkeeper
@@ -62,3 +62,11 @@ def delete(id):
         flash('成功删除物品')
         return redirect(url_for('goalkeeper.itemboard', username=user.username))
     return render_template('.index.html')
+
+
+@goalkeeper.route('/get_state/<path:item_id>', methods=['GET'])
+def get_state(item_id):
+    goalkeeper = Goalkeepers.query.filter_by(item_id=item_id).first()
+    if goalkeeper is None:
+        abort(404)
+    return str(goalkeeper.alarm_state)
