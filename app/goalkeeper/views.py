@@ -70,3 +70,13 @@ def get_state(item_id):
     if goalkeeper is None:
         abort(404)
     return (str(1) if(goalkeeper.alarm_state) else str(0))
+
+
+@goalkeeper.route('/change_state/<path:item_id>', methods=['GET', 'POST'])
+def change_state(item_id):
+    goalkeeper = Goalkeepers.query.filter_by(item_id=item_id).first()
+    if goalkeeper is None:
+        abort(404)
+    goalkeeper.alarm_state = False if goalkeeper.alarm_state else True
+    db.session.add(goalkeeper)
+    return (str(1) if(goalkeeper.alarm_state) else str(0))
