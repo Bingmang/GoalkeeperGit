@@ -15,6 +15,7 @@ def itemregistrate():
     if form.validate_on_submit():
         goalkeeper = Goalkeepers(item_id=form.item_id.data,
                                  item_name=form.item_name.data,
+                                 angle_range=form.angle_range.data,
                                  owner=current_user._get_current_object())
         db.session.add(goalkeeper)
         flash('成功添加 ' + form.item_name.data + ' 到您的物品中')
@@ -26,7 +27,7 @@ def itemregistrate():
 @login_required
 def itemboard():
     user = current_user
-    items = user.goalkeepers.order_by(Goalkeepers.timestamp)
+    items = user.goalkeepers.order_by(Goalkeepers.registe_time)
     return render_template('goalkeeper/itemboard.html', user=user, items=items)
 
 
@@ -43,12 +44,14 @@ def edit_item(id):
         item.item_id = form.item_id.data
         item.item_name = form.item_name.data
         item.alarm_state = form.alarm_state.data
+        item.angle_range = form.angle_range.data
         db.session.add(item)
         flash('成功更新物品信息')
         return redirect(url_for('goalkeeper.itemboard', username=user.username))
     form.item_id.data = item.item_id
     form.item_name.data = item.item_name
     form.alarm_state.data = item.alarm_state
+    form.angle_range = item.angle_range
     return render_template('goalkeeper/edit_item.html', form=form)
 
 
@@ -64,7 +67,7 @@ def delete(id):
     return render_template('.index.html')
 
 
-@goalkeeper.route('/get_state/<path:item_id>', methods=['GET'])
+@goalkeeper.route('/get_state/<path:item_id>', methods=['GET','POST'])
 def get_state(item_id):
     goalkeeper = Goalkeepers.query.filter_by(item_id=item_id).first()
     if goalkeeper is None:
@@ -79,4 +82,11 @@ def change_state(item_id):
         abort(404)
     goalkeeper.alarm_state = False if goalkeeper.alarm_state else True
     db.session.add(goalkeeper)
-    return (str(1) if(goalkeeper.alarm_state) else str(0))
+    return (str(1) if(goalkeeper.alarm_state) else str(0))  
+
+@goalkeeper.route('/get_angle/<path:item_id>', methods=['GET','POST'])
+def get_angle(item_id):
+    goalkeeper = Goalkeepers.query.filter_by(item_id=item_id).first()
+    if goalkeeper is None:
+        abort(404)
+    return (str(goalkeeper.angle_range))

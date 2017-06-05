@@ -219,7 +219,8 @@ class Goalkeepers(db.Model):
     item_name = db.Column(db.Text)
     owner_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     alarm_state = db.Column(db.Boolean, default=False)
-    timestamp = db.Column(db.DateTime, default=datetime.utcnow)
+    registe_time = db.Column(db.DateTime, default=datetime.utcnow)
+    angle_range = db.Column(db.Integer, default=9)
 
     def to_json(self):
         json_goalkeeper = {
@@ -227,7 +228,8 @@ class Goalkeepers(db.Model):
             'item_id': self.item_id,
             'item_name': self.item_name,
             'owner_id': self.owner_id,
+            'angle_range': self.angle_range,
             'alarm_state': self.alarm_state,
-            'registe_time': self.timestamp
+            'registe_time': self.registe_time
         }
         return json_goalkeeper

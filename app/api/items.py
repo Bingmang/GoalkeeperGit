@@ -18,7 +18,7 @@ def get_goalkeeper(item_id):
 
 @api.route('/get_user_goalkeepers/<path:user_email>')
 def get_user_goalkeepers(user_email):
-    goalkeepers = g.current_user.goalkeepers.order_by(Goalkeepers.timestamp)
+    goalkeepers = g.current_user.goalkeepers.order_by(Goalkeepers.registe_time)
     if goalkeepers is not None:
         if user_email == g.current_user.email:
             json_goalkeepers = {"goalkeepers": []}
@@ -27,3 +27,5 @@ def get_user_goalkeepers(user_email):
             return jsonify(json_goalkeepers)
         return forbidden('The Goalkeeper is NOT BELONGS to you! --By Goalkeeper')
     return forbidden('The Goalkeeper is NOT EXIST! --By Goalkeeper')
+
+@api.route('/')
