@@ -27,5 +27,3 @@ def get_user_goalkeepers(user_email):
             return jsonify(json_goalkeepers)
         return forbidden('The Goalkeeper is NOT BELONGS to you! --By Goalkeeper')
     return forbidden('The Goalkeeper is NOT EXIST! --By Goalkeeper')
-
-@api.route('/')
