@@ -27,3 +27,16 @@ def get_user_goalkeepers(user_email):
             return jsonify(json_goalkeepers)
         return forbidden('The Goalkeeper is NOT BELONGS to you! --By Goalkeeper')
     return forbidden('The Goalkeeper is NOT EXIST! --By Goalkeeper')
+
+@api.route('/change_range/<path:id_range>')
+def change_range(id_range):
+    #/change_range/liyanxing_angle_range=1
+    goalkeeper_id = id_range[:-14]
+    goalkeeper = Goalkeepers.query.filter_by(item_id=goalkeeper_id).first()
+    if goalkeeper is not None:
+        if g.current_user == goalkeeper.owner:
+            goalkeeper.angle_range=id_range[-1]
+            db.session.add(goalkeeper)
+            return '1'
+        return forbidden('The Goalkeeper is NOT BELONGS to you! --By Goalkeeper')
+    return forbidden('The Goalkeeper is NOT EXIST! --By Goalkeeper')
