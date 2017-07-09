@@ -221,6 +221,9 @@ class Goalkeepers(db.Model):
     alarm_state = db.Column(db.Boolean, default=False)
     registe_time = db.Column(db.DateTime, default=datetime.utcnow)
     angle_range = db.Column(db.Integer, default=9)
+    #经纬度
+    latitude = db.Column(db.Float, default=0.0);
+    longitude = db.Column(db.Float, default=0.0);
 
     def to_json(self):
         json_goalkeeper = {
@@ -230,6 +233,8 @@ class Goalkeepers(db.Model):
             'owner_id': self.owner_id,
             'angle_range': self.angle_range,
             'alarm_state': self.alarm_state,
-            'registe_time': self.registe_time
+            'registe_time': self.registe_time,
+            'latitude': self.latitude,
+            'longitude':self.longitude
         }
         return json_goalkeeper

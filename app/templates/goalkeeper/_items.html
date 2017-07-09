@@ -10,6 +10,8 @@
                 物品警戒范围： {{ item.angle_range }}
                 物品所有者ID：{{ item.owner_id }}
                 物品报警状态：{{ item.alarm_state }}
+                物品经度：{{ item.latitude }}
+                物品纬度：{{ item.longitude }}
         <div class="post-footer">
             <a href="{{ url_for('goalkeeper.edit_item', id=item.id) }}">
                 <span class="label label-primary">Edit</span>

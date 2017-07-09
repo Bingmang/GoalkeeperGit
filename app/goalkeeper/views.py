@@ -66,6 +66,7 @@ def delete(id):
         return redirect(url_for('goalkeeper.itemboard', username=user.username))
     return render_template('.index.html')
 
+#以下为单片机用API
 
 @goalkeeper.route('/get_state/<path:item_id>', methods=['GET','POST'])
 def get_state(item_id):
@@ -90,3 +91,15 @@ def get_angle(item_id):
     if goalkeeper is None:
         abort(404)
     return (str(goalkeeper.angle_range))
+
+@goalkeeper.route('/post_gps/<path:item_id>', methods=['POST'])
+def post_gps(item_id):
+    goalkeeper = Goalkeepers.query.filter_by(item_id=item_id).first()
+    if goalkeeper is None:
+        abort(404)
+    latitude = request.form.get('latitude', 0.0);
+    longitude = request.form.get('longitude', 0.0);
+    goalkeeper.latitude = latitude;
+    goalkeeper.longitude = longitude;
+    db.session.add(goalkeeper);
+    return (str(1))
