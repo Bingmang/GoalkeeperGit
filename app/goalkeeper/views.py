@@ -97,9 +97,14 @@ def post_gps(item_id):
     goalkeeper = Goalkeepers.query.filter_by(item_id=item_id).first()
     if goalkeeper is None:
         abort(404)
-    latitude = request.form.get('latitude', 0.0);
-    longitude = request.form.get('longitude', 0.0);
-    goalkeeper.latitude = latitude;
-    goalkeeper.longitude = longitude;
-    db.session.add(goalkeeper);
-    return (str(1))
+    location = request.form.get('location', '')
+    #存在逗号
+    split = location.find(',')
+    if(split != -1):
+        latitude = float(location[:split])
+        longitude = float(location[split+1:])
+        goalkeeper.latitude = latitude
+        goalkeeper.longitude = longitude
+        db.session.add(goalkeeper)
+        return (str(1))
+    return (str(0))
